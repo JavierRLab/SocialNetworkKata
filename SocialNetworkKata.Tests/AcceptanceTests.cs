@@ -7,7 +7,7 @@ public class AcceptanceTests
     {
         var writer = new StringWriter();
         Console.SetOut(writer);
-        var sn = new SocialNetwork(new PostRepository());
+        var sn = new SocialNetwork(new PostRepository(), new Clock());
         sn.Execute("bob -> I think, therefore I err");
         sn.Execute("bob");
         Assert.Equal("I think, therefore I err (1 minute ago)\n", writer.ToString());
