@@ -1,4 +1,4 @@
-﻿namespace SocialNetworkKata.Tests;
+﻿namespace SocialNetworkKata;
 
 public class PostRepository : IPostRepository
 {
