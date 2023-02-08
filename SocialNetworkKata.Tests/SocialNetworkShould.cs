@@ -8,7 +8,9 @@ public class SocialNetworkShould
     public void Test1()
     {
         var postTime = DateTime.UtcNow;
-        var expected = new Post("Simon", "Jump on one leg.", postTime);
+        var randomUserName = Guid.NewGuid().ToString();
+        var randonMessage = Guid.NewGuid().ToString();
+        var expected = new Post(randomUserName, randonMessage, postTime);
 
         var repo = new Mock<IPostRepository>();
         var clock = new Mock<IClock>();
@@ -16,8 +18,8 @@ public class SocialNetworkShould
         clock.Setup(c => c.UtcNow).Returns(postTime);
 
         new SocialNetwork(repo.Object, clock.Object)
-            .Execute("Simon -> Jump on one leg.");
-        
+            .Execute($"{randomUserName} -> {randonMessage}");
+
         repo.Verify(r => r.Add(expected), Times.Once);
     }
 }
