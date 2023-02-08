@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetworkKata", "SocialNetworkKata\SocialNetworkKata.csproj", "{92BFD3F9-C2A1-4944-B089-0A9E32F706D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetworkKata.Tests", "SocialNetworkKata.Tests\SocialNetworkKata.Tests.csproj", "{B5D59A3C-EE6D-4565-AFB9-B89E858FD22D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92BFD3F9-C2A1-4944-B089-0A9E32F706D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92BFD3F9-C2A1-4944-B089-0A9E32F706D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92BFD3F9-C2A1-4944-B089-0A9E32F706D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92BFD3F9-C2A1-4944-B089-0A9E32F706D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5D59A3C-EE6D-4565-AFB9-B89E858FD22D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D59A3C-EE6D-4565-AFB9-B89E858FD22D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D59A3C-EE6D-4565-AFB9-B89E858FD22D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D59A3C-EE6D-4565-AFB9-B89E858FD22D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
