@@ -1,6 +1,7 @@
 Exercise
 Implement a console-based social networking application (similar to Twitter) satisfying the scenarios below.
 Scenarios
+
 Posting: Alice can publish messages to a personal timeline
 > Alice -> I love the weather today
 > Bob -> Damn! We lost!
@@ -28,7 +29,9 @@ Bob - Damn! We lost! (2 minutes ago)
 Alice - I love the weather today (5 minutes ago)
  
 Details
+
 The application must use the console for input and output.
+
 Users submit commands to the application. There are four commands. 'posting', 'reading', etc. are not part of the commands; commands always start with the user's name.
 posting: <user name> -> <message>
 reading: <user name>
