@@ -2,5 +2,5 @@
 
 public interface IPostRepository
 {
-    IEnumerable<Post> GetTimeline(string username);
+    void Add(Post post);
 }

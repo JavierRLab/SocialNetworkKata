@@ -7,14 +7,17 @@ public class SocialNetworkShould
     [Fact(DisplayName = "Store a message for a user")]
     public void Test1()
     {
+        var postTime = DateTime.UtcNow;
+        var expected = new Post("Simon", "Jump on one leg.", postTime);
+
         var repo = new Mock<IPostRepository>();
         var clock = new Mock<IClock>();
-        var postTime = DateTime.UtcNow;
+
         clock.Setup(c => c.UtcNow).Returns(postTime);
-        var sn = new SocialNetwork(repo.Object, clock.Object);
-        sn.Execute("Simon -> Jump on one leg.");
-        var simonTmln = repo.Object.GetTimeline("Simon").ToArray();
-        Assert.Single(simonTmln);
-        Assert.Equal(new Post("Simon", "Jump on one leg.", postTime), simonTmln.First());
+
+        new SocialNetwork(repo.Object, clock.Object)
+            .Execute("Simon -> Jump on one leg.");
+        
+        repo.Verify(r => r.Add(expected), Times.Once);
     }
 }

@@ -2,6 +2,6 @@
 
 public class PostRepository : IPostRepository
 {
-    public IEnumerable<Post> GetTimeline(string username) =>
+    public void Add(Post post) =>
         throw new NotImplementedException();
 }

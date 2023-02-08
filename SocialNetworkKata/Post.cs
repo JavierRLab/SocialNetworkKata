@@ -1,3 +1,3 @@
 ﻿namespace SocialNetworkKata;
 
-public record Post(string Simon, string JumpOnOneLeg, DateTime PostTime);
+public record Post(string Username, string Message, DateTime PostTime);

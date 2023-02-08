@@ -2,10 +2,17 @@
 
 public class SocialNetwork
 {
-    public SocialNetwork(IPostRepository repository, IClock clock) { }
+    private readonly IPostRepository repository;
+    private readonly IClock clock;
+
+    public SocialNetwork(IPostRepository repository, IClock clock)
+    {
+        this.repository = repository;
+        this.clock = clock;
+    }
 
     public void Execute(string commad)
     {
-        throw new NotImplementedException();
+        repository.Add(new Post("Simon", "Jump on one leg.", clock.UtcNow));
     }
 }
